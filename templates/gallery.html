@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ gallery_name }}</title>
+    <style>
+        .gallery-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px; /* Adjust the space between items */
+        }
+
+        .gallery-item {
+            flex-basis: calc(25% - 10px); /* Adjust number for desired width, subtracting the gap */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .gallery-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px; /* Optional: for rounded corners */
+        }
+
+        .gallery-item input[type=checkbox] {
+            transform: scale(1.5); /* Makes the checkbox larger */
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Gallery: {{ gallery_name }}</h1>
+    <div class="gallery-container">
+        {% for thumbnail, photo in images %}
+            <div class="gallery-item">
+                <input type="checkbox" id="photo{{ loop.index }}" name="photo{{ loop.index }}">
+                <label for="photo{{ loop.index }}">Select</label>
+                <a href="{{ url_for('send_image', filename=photo) }}">
+                    <img src="{{ url_for('send_image', filename=thumbnail) }}" alt="Thumbnail">
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
