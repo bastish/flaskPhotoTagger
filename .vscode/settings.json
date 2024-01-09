@@ -1,0 +1,14 @@
+{
+    "python.pythonPath": "/Users/kevincameron/Documents/onelifejapan_static_2023/flaskPhotoTagger/flaskvenv/bin/python",
+
+    "terminal.integrated.env.linux": {
+      "FLASK_APP": "app.py"
+    },
+    "terminal.integrated.env.windows": {
+      "FLASK_APP": "app.py"
+    },
+    "terminal.integrated.env.osx": {
+      "FLASK_APP": "app.py"
+    }
+  }
+  

@@ -33,7 +33,7 @@
     <h1>Photo Galleries</h1>
     <ul>
         {% for gallery in galleries %}
-            <li><a href="{{ url_for('gallery_view', gallery_name=gallery) }}">{{ gallery }}</a></li>
+            <li><a href="{{ url_for('gallery_bp.gallery_view', gallery_name=gallery) }}">{{ gallery }}</a></li>
         {% endfor %}
     </ul>
 </body>

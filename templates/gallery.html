@@ -36,8 +36,8 @@
             <div class="gallery-item">
                 <input type="checkbox" id="photo{{ loop.index }}" name="photo{{ loop.index }}">
                 <label for="photo{{ loop.index }}">Select</label>
-                <a href="{{ url_for('send_image', filename=photo) }}">
-                    <img src="{{ url_for('send_image', filename=thumbnail) }}" alt="Thumbnail">
+                <a href="{{ url_for('gallery_bp.send_image', filename=photo) }}">
+                    <img src="{{ url_for('gallery_bp.send_image', filename=thumbnail) }}" alt="Thumbnail">
                 </a>
             </div>
         {% endfor %}

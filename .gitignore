@@ -106,7 +106,7 @@ ENV/
 env/
 env.bak/
 venv.bak/
-flasvenv/
+flaskvenv/
 __pycache__/
 
 # Spyder project settings
